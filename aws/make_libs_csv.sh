@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 #SBATCH --job-name=make_libs_csv
-#SBATCH -output=/mnt/efs/clusterfcs/data/fcs-mome-premic/logs/make_libs_pref_%j.out
-#SBATCH -error=/mnt/efs/clusterfcs/data/fcs-mome-premic/logs/make_libs_pref_%j.err
+#SBATCH --output=/mnt/efs/clusterfcs/data/fcs-mome-premic/logs/make_libs_pref_%j.out
+#SBATCH --error=/mnt/efs/clusterfcs/data/fcs-mome-premic/logs/make_libs_pref_%j.err
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=8000
