@@ -3,9 +3,8 @@
 #SBATCH --output=/mnt/efs/clusterfcs/data/fcs-mome-premic/logs/copy_arc_%j.out
 #SBATCH --error=copy_s3_fastqs_%j.err
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task 16
-#SBATCH --time=12:00:00
-#SBATCH --mail-user= mccarbajo@fundacioncarlossimon.com
+#SBATCH --time=24:00:00
+#SBATCH --mail-user=mccarbajo@fundacioncarlossimon.com
 #SBATCH --mail-type=END,FAIL
 #SBATCH --partition=file-transfer
  
@@ -31,5 +30,5 @@ echo ">> Copy GEX"
 aws s3 cp "$GEX_S3" "$DEST/raw/rnaseq/" \
   --recursive --only-show-errors --no-progress --exclude "*Undetermined*"
  
-echo ">> Done. Tamaños:"
+echo ">> Done. Sizes:"
 du -sh "$DEST/raw/atac" "$DEST/raw/rnaseq" || true
