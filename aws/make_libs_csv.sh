@@ -9,7 +9,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mccarbajo@fundacioncarlossimon.com
-#SBATCH -partition=compute-128
+#SBATCH --partition=compute-128
  
  
 set -euo pipefail
