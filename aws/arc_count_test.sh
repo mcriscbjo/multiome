@@ -68,8 +68,6 @@ echo "==========================================================================
   --id="$ID" \
   --reference="$REF" \
   --libraries="$LIBS" \
-  --jobmode=local \
   --localcores="${SLURM_CPUS_PER_TASK}" \
-  --disable-ui \
-  --output-dir="$OUTDIR"
+  --disable-ui 
 printf ">>> Completed %s in %dm %ds (secondary enabled)\n" "$ID" $((SECONDS/60)) $((SECONDS%60)))
